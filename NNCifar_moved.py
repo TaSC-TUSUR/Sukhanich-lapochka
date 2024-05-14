@@ -70,7 +70,7 @@ autoencoder.compile(loss='mean_squared_error', optimizer=krs.optimizers.Adam(lea
                     metrics=['accuracy', krs.metrics.Precision(), krs.metrics.Recall()])
 
 # Обучение модели
-ep = 40
+ep = 20
 autoencoder.fit(x=all_image, y=all_image, batch_size=4000, epochs=ep)
 
 # Сохранение модели энкодера
